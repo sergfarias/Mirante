@@ -1,0 +1,99 @@
+﻿@model Works.DeveloperEvaluation.Frontend.Models.Tarefa
+
+@{
+    ViewData["Title"] = "Criar Tarefa";
+}
+
+<h1>Criar Tarefa</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Titulo" class="control-label"></label>
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
+            </div>
+
+           @*  <div class="form-group mb-3">
+                <label asp-for="Preco" class="control-label"></label>
+                <input asp-for="Preco" class="form-control" type="number" step="0.01" />
+                <span asp-validation-for="Preco" class="text-danger"></span>
+            </div> *@
+
+           @*  <div class="form-group mb-3">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" type="number" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div> *@
+
+
+            <div class="form-group mb-3">
+                <label class="control-label">Status</label>
+                <select name="Status" id="status" class="select2 autor form-control" data-allow-clear="true">
+                    <option value="-1">Selecione</option>
+                    <option value="0">Pendente</option>
+                    <option value="1">Em andamento</option>
+                    <option value="2">Concluída</option>
+                </select>
+            </div>
+
+
+            <div class="form-group mb-3">
+                <label asp-for="DataVencimento" class="control-label"></label>
+                <input asp-for="DataVencimento" class="form-control" type="date" />
+                <span asp-validation-for="DataVencimento" class="text-danger"></span>
+            </div>
+
+
+         @*    <div class="form-group mb-3">
+                    <label class="control-label">Autor</label>
+                <select multiple name="Autor" id="autor" class="select2 autor form-control" data-allow-clear="true">
+                        <option value="0">Selecione</option>
+                    @if (@ViewBag.Autores!=null){
+                        @foreach (var autor in @ViewBag.Autores)
+                        {
+                            <option value="@autor.CodAu">@autor.Nome</option>
+                        }
+                    }
+                    </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="control-label">Assunto</label>
+                <select multiple name="Assunto" id="assunto" class="select2 assunto form-control" data-allow-clear="true">
+                    <option value="0">Selecione</option>
+                    @if (@ViewBag.Assuntos != null)
+                    {
+                        @foreach (var assunto in @ViewBag.Assuntos)
+                        {
+                            <option value="@assunto.CodAs">@assunto.Descricao</option>
+                        }
+                    }
+                </select>
+            </div> *@
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
