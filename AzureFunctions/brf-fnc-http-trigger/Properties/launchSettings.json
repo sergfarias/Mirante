@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "brf_fnc_http_trigger": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7132",
-      "launchBrowser": false
-    }
-  }
-}

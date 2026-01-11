@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "brf_fnc_http_sbus": {
-      "commandName": "Project",
-      "commandLineArgs": "--port 7121",
-      "launchBrowser": false
-    }
-  }
-}
