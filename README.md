@@ -2,7 +2,7 @@
 
 ## Considerações:
 
-1 – Feito com NetCore6, Visual Studio 22.
+1 – Feito com NetCore8, Visual Studio 22.
 
 2 - Usei uma arquitetura DDD para tentar deixar o mais limpo possível, com separação dos projetos.
 
